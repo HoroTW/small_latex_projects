@@ -1,0 +1,48 @@
+%% LaTeX Briefvorlage mit modern-cv Stil
+%% originally from https://github.com/joede/modern-cv-style-letter
+%%
+%% Hinweise:
+%%   * es können mehrere Umgebungen {letter} für mehrere Briefe genutzt werden.
+%%   * innerhalb des Adressats ist \textbf{} und \emph{} erlaubt.
+%%   * mit \selectlanguage{english} / \selectlanguage{ngerman} kann zwischen
+%%     \opening und \closing die Sprache umgeschaltet werden.
+%%   * eventuell \setkomavar{location}{\raggedleft{}Kundennummer: 12345678 \\}
+%%     um Kundennummern oder Ref.nummer auf Schreiben...
+%% -------------------------------------------------------------------------------
+
+\documentclass[absender]{scrlttr2}
+
+
+\begin{document}
+
+%% optional: Anlagentext ändern (Doppelpunkt wird automatisch gesetzt)
+%\setkomavar*{enclseparator}{Anlage}
+
+%% Betreff
+\setkomavar{subject}{Betreff: Immatrikulationsantrag zum Sommersemester 2022\\
+Bewerbernummer: 407392 }
+%% optional: Datum vorgeben (sonst heutiges Datum)
+%\setkomavar{date}{den 09. Januar 2013}
+%% optional: Ort des Schreibens vorgeben (sonst Ort aus Absender)
+%\setkomavar{place}{Breitburg}
+%% optional: Kundennummer oder Ref.ID eines Schreibens
+%\setkomavar{location}{\raggedleft{}\footnotesize{}Kundennummer: 12345678 \\}
+
+
+% Definiere Brief und Empfaenger 1:
+\begin{letter}{
+    Universität Erl.-Nbg.\\
+    Referat L5 - Studierendenverwaltung\\
+    Schloßplatz 4\\
+    91054 Erlangen
+}
+\opening{Sehr geehrte Damen und Herren,}
+
+hier ist meine Bewerbung zum Sommersemester 2022.
+
+
+\closing{Mit freundlichen Grüßen,}
+% \encl{Staubsauger} % optional: Anlage als Anhang
+\end{letter}
+\end{document}
+
