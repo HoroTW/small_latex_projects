@@ -1,0 +1,54 @@
+%% LaTeX Briefvorlage mit modern-cv Stil
+%% originally from https://github.com/joede/modern-cv-style-letter
+%%
+%% Hinweise:
+%%   * es können mehrere Umgebungen {letter} für mehrere Briefe genutzt werden.
+%%   * innerhalb des Adressats ist \textbf{} und \emph{} erlaubt.
+%%   * mit \selectlanguage{english} / \selectlanguage{ngerman} kann zwischen
+%%     \opening und \closing die Sprache umgeschaltet werden.
+%%   * eventuell \setkomavar{location}{\raggedleft{}Kundennummer: 12345678 \\}
+%%     um Kundennummern oder Ref.nummer auf Schreiben...
+%% -------------------------------------------------------------------------------
+
+\documentclass[absender]{scrlttr2}
+\usepackage{graphicx}
+
+
+\begin{document}
+
+%% optional: Anlagentext ändern (Doppelpunkt wird automatisch gesetzt)
+%\setkomavar*{enclseparator}{Anlage}
+
+%% Betreff
+\setkomavar{subject}{Betreff: Kündigung des Arbeitsverhältnisses}
+%% optional: Datum vorgeben (sonst heutiges Datum)
+%\setkomavar{date}{den 09. Januar 2013}
+%% optional: Ort des Schreibens vorgeben (sonst Ort aus Absender)
+%\setkomavar{place}{Breitburg}
+%% optional: Kundennummer oder Ref.ID eines Schreibens
+%\setkomavar{location}{\raggedleft{}\footnotesize{}Kundennummer: 12345678 \\}
+
+
+% Definiere Brief und Empfaenger 1:
+\begin{letter}{
+    Oberhohenrieder Landbrotbäckerei Ed. Wolf GmbH -- Personalbüro\\
+    Steinerne Heide 17\\
+    97437 Haßfurt
+}
+\opening{Sehr geehrte Damen und Herren,}
+hiermit kündige ich das am 08.10.2021 geschlossene Arbeitsverhältnis fristgerecht zum 01.05.2022.
+
+Eventuell vorhandene Überstunden sollen wie vereinbart per Freistellung abgerechnet werden.
+
+
+\vspace{1cm}
+Hochachtungsvoll,\\
+\vspace{1cm}\\
+\includegraphics[width=10cm]{nihal-signature.png}\\
+\rule{11cm}{0.5pt}\\
+\vspace{0.1cm}\\
+\usekomavar{signature}
+% \encl{Staubsauger} % optional: Anlage als Anhang
+\end{letter}
+\end{document}
+
